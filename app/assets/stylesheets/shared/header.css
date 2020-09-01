@@ -1,0 +1,44 @@
+.top-header {
+  background-color: #4d5a64;
+  width: 100vw;
+  padding: 0 2vw;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+
+.top-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.sokuconne-icon {
+  width: 11vw;
+  filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(107%) contrast(101%);
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.user-info {
+  display: flex;
+  min-width: 200px;
+}
+
+.user-info li {
+ padding-right: 12px;
+ color: white;
+ font-weight: bold;
+ text-decoration: none;
+}
+
+.logout  {
+  text-decoration: none;
+  color: white;
+}

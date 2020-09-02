@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :messages
   has_many :pro_users
+  has_many :projects, through: :pro_users
 
   japanese_letters = /\A[ぁ-んァ-ン一-龥]+\z/
   with_options presence: true do

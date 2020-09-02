@@ -6,7 +6,7 @@
     <ul class='user-info'>
       <li>株式会社hoge</li>
       <li>fuga山hoge太郎</li>
-      <li><%= link_to 'ログアウト', method: :delete, class: 'logout' %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'logout' %></li>
     </ul>
   </div>
 </header>

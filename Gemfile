@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # User manegement function
 gem 'devise'
+
+# For checking in the process of implementation
+gem 'pry-rails'

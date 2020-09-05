@@ -58,3 +58,7 @@ gem 'devise'
 
 # For checking in the process of implementation
 gem 'pry-rails'
+
+# Reading the CSV and inserting all datas
+gem 'roo'
+gem 'activerecord-import'

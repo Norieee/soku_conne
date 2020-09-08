@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :projects, only: [:new, :create]
   resources :qas do
     collection { post :import }
+    collection { get :export }
   end
 end

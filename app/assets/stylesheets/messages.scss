@@ -74,3 +74,22 @@ input[name="tab_item"] {
   width: calc(100% - 250px);
   padding: 20px;
 }
+
+.information-contents {
+  height: 42vh;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  overflow: scroll;
+}
+
+.information-contents__important-contents,
+.information-contents__new-contents {
+  width: 80%;
+}
+
+.information-contents__important-contents--content,
+.information-contents__new-contents--content {
+  margin: 10px 0 10px 15px;
+}

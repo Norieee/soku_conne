@@ -1,14 +1,34 @@
-<div class='qas-list__qa-contents__qa'>
-  <div class='qa-no'>
-    <%= qa.no %>
+<div class='qas-list__qa-contents--qa'>
+  <div class='qas-list__qa-contents--qa-content'>
+    <div class='qa-no__left'>
+      No：
+    </div>
+    <div class='qa-no__right'>
+      <%= qa.no %>
+    </div>
   </div>
-  <div class='qa-category'>
-    <%= qa.category %>
+  <div class='qas-list__qa-contents--qa-content'>
+    <div class='qa-no__left'>
+      分類：
+    </div>
+    <div class='qa-no__right'>
+      <%= qa.category %>
+    </div>
   </div>
-  <div class='qa-question'>
-    <%= qa.question %>
+  <div class='qas-list__qa-contents--qa-content'>
+    <div class='qa-no__left'>
+      質問：
+    </div>
+    <div class='qa-no__right'>
+      <%= qa.question %>
+    </div>
   </div>
-  <div class='qa-answer'>
-    <%= qa.answer %>
+  <div class='qas-list__qa-contents--qa-content'>
+    <div class='qa-no__left'>
+      回答：
+    </div>
+    <div class='qa-no__right'>
+      <%= qa.answer %>
+    </div>
   </div>
 </div>

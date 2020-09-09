@@ -4,6 +4,11 @@
     <%= render 'shared/side_bar' %>
   </div>
   <div class='info'>
-    
-  <div>
+    <%= render partial: 'search_form' %>
+    <div class='qas-list'>
+      <div class='qas-list__qa-contents'>
+        <%= render partial: 'qa', collection: @qas %>
+      </div>
+    </div>
+  </div>
 </div>

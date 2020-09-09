@@ -1,4 +1,13 @@
-<%= form_tag import_qas_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "インポート" %>
-<% end %>
+<div class='qa-list-import'>
+  <div class='qa-list-import__message'>
+    <span>【Q&A更新】</span>
+    <br>QAリストを更新する場合は、当該ファイルを選択しインポートして下さい。
+    <br><span>※ファイル形式はCSVとしていただきますようお願いします。</span>
+  </div>
+  <div class='qa-list-import__form'>
+    <%= form_tag import_qas_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "インポート" %>
+    <% end %>
+  </div>
+</div>

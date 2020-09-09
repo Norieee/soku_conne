@@ -4,8 +4,8 @@
   </div>
   <div class='top-header-right'>
     <ul class='user-info'>
-      <li>株式会社hoge</li>
-      <li>fuga山hoge太郎</li>
+      <li><%= current_user.company %></li>
+      <li><%= current_user.last_name %><%= current_user.first_name %></li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'logout' %></li>
     </ul>
   </div>

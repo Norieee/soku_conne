@@ -1,3 +1,11 @@
-<%= button_to export_qas_path(format: :xlsx), method: :get do %>
-    QA一覧エクセル出力
-<% end %>
+<div class='qa-list-export'>
+  <div class='qa-list-export__message'>
+    <span>【Q&A出力】</span>
+    <br>エクスポートをクリックするとQAリストをExcelファイルでダウンロードすることができます。
+  </div>
+  <div class='qa-list-export__form'>
+    <%= button_to export_qas_path(format: :xlsx), method: :get do %>
+      エクスポート
+    <% end %>
+  </div>
+</div>

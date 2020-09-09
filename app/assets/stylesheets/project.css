@@ -23,10 +23,18 @@ li {
   font-size: 13px;
 }
 
+.project-wrapper{
+  background-color: #f5f8fc;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+}
+
 .project-form {
   width: 980px;
-  margin: 60px auto;
+  height: 45vh;
   padding: 40px;
+  margin-top: 60px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -96,7 +104,6 @@ li {
   float: left;
 }
 .project-user__btn {
-  float: right;
   display: inline-block;
   cursor: pointer;
 }

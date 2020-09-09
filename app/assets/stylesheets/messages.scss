@@ -12,65 +12,81 @@
   overflow: scroll;
 }
 
-.new_project {
-  font-weight: bold;
+.menu {
+  max-width: 600px;
 }
 
-.project, .new_project, .qa-content {
-  padding: 20px 15px;
-  border-bottom: 1px groove white;
-}
-
-.project-name a, .qa-content a {
+.menu a {
+  display: block;
+  padding: 15px;
   text-decoration: none;
   color: white;
 }
 
-.tabs {
-  margin-top: 50px;
-  background-color: #4d5a64;
-  margin: 0 auto;
-}
-
-.tab_item {
-  width: 100%;
-  height: 50px;
-  padding: 10px 15px;
-  line-height: 50px;
-  font-size: 16px;
+label {
   display: block;
-  float: left;
-  color: white;
-  font-weight: bold;
-  transition: all 0.2s ease;
+  margin: 4px 0;
+  padding: 15px;
+  line-height: 1px;
+  color :#fff;
+  background : #4d5a64;
+  cursor :pointer;
 }
 
-.tab_item:hover {
-  opacity: 0.6;
+label:hover {
+  opacity: 0.7;
+  background-color: #535f68;
 }
 
-input[name="tab_item"] {
+input {
   display: none;
 }
 
-.tab_content {
-  display: none;
-  clear: both;
+.menu ul {
+  margin: 0;
+  padding: 0;
+  background :#57646d;
+  list-style: none;
+}
+
+.menu li {
+  height: 0;
+  border-bottom: 1px solid #4d5a64;
   overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-#projects:checked ~ #projects_content,
-#qas:checked ~ #qas_content {
-  display: block;
-}
-
-.tabs input:checked + .tab_item {
-  background-color: #4d5a64;;
-  color: #fff;
+#menu_bar01:checked ~ #links01 li,
+#menu_bar02:checked ~ #links02 li {
+  height: 54px;
+  opacity: 1;
 }
 
 .info {
   background-color: #f5f8fc;
   width: calc(100% - 250px);
   padding: 20px;
+}
+
+.information-contents {
+  height: 42vh;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  overflow: scroll;
+}
+
+.information-contents__important-contents,
+.information-contents__new-contents {
+  width: 80%;
+}
+
+.information-contents__important-contents--content,
+.information-contents__new-contents--content {
+  margin: 10px 0 10px 15px;
 }

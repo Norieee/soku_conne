@@ -1,36 +1,18 @@
-<div class="tabs">
-  <input id="projects" type="radio" name="tab_item" checked>
-  <label class="tab_item" for="projects">Projects</label>
-  <div class="tab_content" id="projects_content">
-    <div class="tab_content_description">
-      <div class='projects'>
-        <div class='new_project'>
-          <div class='project-name'>
-            <a href='/projects/new'>Project追加</a>
-          </div>
+<div class='menu'>
+    <label for="menu_bar01">Projects</label>
+    <input type="checkbox" id="menu_bar01" class="accordion" />
+    <ul id="links01">
+      <li><a href='/projects/new'>Project追加</a></li>
+      <% current_user.projects.each do |project| %>
+        <div class="project-name">
+          <li><%= link_to project.name, '#' %></li>
         </div>
-        <div class='project'>
-          <% current_user.projects.each do |project| %>
-            <div class="project-name">
-              <%= link_to project.name, '#' %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="tabs">
-  <input id="qas" type="radio" name="tab_item" checked>
-  <label class="tab_item" for="qas">Q&A</label>
-  <div class="tab_content" id="qas_content">
-    <div class="tab_content_description">
-      <div class='qa-content'>
-        <a href='/qas'>Q&A一覧</a>
-      </div>
-      <div class='qa-content'>
-        <a href='/qas/new'>インポート/エクスポート</a>
-      </div>
-    </div>
-  </div>
+      <% end %>
+    </ul>
+    <label for="menu_bar02">Q&A</label>
+    <input type="checkbox" id="menu_bar02" class="accordion" />
+    <ul id="links02">
+      <li><a href='/qas'>Q&A一覧</a></li>
+      <li><a href='/qas/new'>インポート/エクスポート</a></li>
+    </ul>
 </div>

@@ -23,7 +23,7 @@
   color: white;
 }
 
-label {
+.menu label {
   display: block;
   margin: 4px 0;
   padding: 15px;
@@ -33,12 +33,12 @@ label {
   cursor :pointer;
 }
 
-label:hover {
+.menu label:hover {
   opacity: 0.7;
   background-color: #535f68;
 }
 
-input {
+.menu input {
   display: none;
 }
 

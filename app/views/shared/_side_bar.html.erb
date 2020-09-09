@@ -5,7 +5,7 @@
       <li><a href='/projects/new'>Project追加</a></li>
       <% current_user.projects.each do |project| %>
         <div class="project-name">
-          <li><%= link_to project.name, '#' %></li>
+          <li><%= link_to project.name, project_messages_path(project) %></li>
         </div>
       <% end %>
     </ul>

@@ -1,7 +1,7 @@
 // Place all the styles related to the qas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.qas-list__qa-contents {
+.qas-list__qa-contents, .qas-list__search-result {
   height: 83vh;
   background-color: white;
   border-radius: 10px;

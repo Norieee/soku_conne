@@ -1,0 +1,12 @@
+<%= render 'shared/header'%>
+<div class='wrapper'>
+  <div class='side-bar'>
+    <%= render 'shared/side_bar' %>
+  </div>
+  <div class='info'>
+    <%= render partial: 'search_form' %>
+    <div class='qas-list__search-result'>
+       <%= render partial: 'qa', collection: @qas %>
+    </div>
+  <div>
+</div>

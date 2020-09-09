@@ -15,4 +15,14 @@ class Qa < ApplicationRecord
   def self.updatable_attributes
     ["no", "category", "question", "answer"]
   end
+
+  def self.search(search)
+    if search != ""
+      Qa.where('category LIKE(?) OR question LIKE(?) OR answer LIKE(?)',
+               "%#{search}%", "%#{search}%", "%#{search}%"
+      )
+    else
+      Qa.none
+    end
+  end
 end

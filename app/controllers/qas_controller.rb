@@ -20,4 +20,14 @@ class QasController < ApplicationController
       }
     end
   end
+
+  def search
+    @qas= Qa.search(params[:keyword])
+  end
+
+  private
+
+  def search_product
+    @p = Product.ransack(params[:q])
+  end
 end

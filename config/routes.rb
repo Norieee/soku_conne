@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     collection { post :import }
     collection { get :export }
     collection { get :search }
+  resources :projects, only: [:new, :create] do
+    resources :messages, only: [:show, :create]
   end
 end

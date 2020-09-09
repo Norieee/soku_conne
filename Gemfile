@@ -58,3 +58,15 @@ gem 'devise'
 
 # For checking in the process of implementation
 gem 'pry-rails'
+
+# Reading the CSV and inserting all datas
+gem 'roo'
+gem 'activerecord-import'
+
+# Datas output as a list by Excel
+gem 'rubyzip', '>= 1.2.1'
+gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
+gem 'axlsx_rails'
+
+# Implementation of search function
+gem 'ransack'

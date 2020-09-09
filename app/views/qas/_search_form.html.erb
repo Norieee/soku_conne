@@ -1,0 +1,6 @@
+<div class='search-form'>
+  <%= form_with(url: search_qas_path, local: true, method: :get, class: 'search-form__forme-area') do |form| %>
+    <%= form.text_field :keyword, placeholder: 'キーワードから探す', class: 'input-box' %>
+    <%= form.submit '検索' %>
+  <% end%>
+</div>

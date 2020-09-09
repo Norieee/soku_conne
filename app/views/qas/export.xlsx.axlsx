@@ -1,0 +1,26 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+  wb.add_worksheet(name: "QA_list") do |sheet|
+    styles = {
+      header: wb.styles.add_style(bg_color: 'A4C6FF'),
+      cell: wb.styles.add_style(color: '000000')
+    }
+
+    sheet.add_row do |row|
+      row.add_cell('No', style: styles[:header])
+      row.add_cell('category', style: styles[:header])
+      row.add_cell('question', style: styles[:header])
+      row.add_cell('answer', style: styles[:header])
+    end
+
+    @qas.each do |qa|
+      sheet.add_row do |row|
+          row.add_cell(qa.no, style: styles[:cell])
+          row.add_cell(qa.category, style: styles[:cell])
+          row.add_cell(qa.question, style: styles[:cell])
+          row.add_cell(qa.answer, style: styles[:cell])
+      end
+    end
+  end
+end

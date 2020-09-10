@@ -62,7 +62,7 @@
 ![ログイン後TOP](app/assets/images/top_after_login.png)
 
 - メッセージ送信後画面（ビュー仮置き）
-![メッセージ後](app/assets/images/tproject_message.png)
+![メッセージ後](app/assets/images/project_message.png)
 
 - QA一覧
 ![QA一覧](app/assets/images/QA_index.png)

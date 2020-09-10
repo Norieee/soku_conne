@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_03_093842) do
+ActiveRecord::Schema.define(version: 2020_09_10_051840) do
+
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "gist_id", null: false
+    t.integer "urgency_id", null: false
+    t.integer "response_id", null: false
+    t.integer "res_type_id"
+    t.integer "content_id", null: false
+    t.string "sup_content"
+    t.integer "status_id", null: false
+    t.string "others"
+    t.bigint "user_id"
+    t.bigint "project_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_messages_on_project_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
 
   create_table "pro_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -51,6 +68,8 @@ ActiveRecord::Schema.define(version: 2020_09_03_093842) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "messages", "projects"
+  add_foreign_key "messages", "users"
   add_foreign_key "pro_users", "projects"
   add_foreign_key "pro_users", "users"
 end

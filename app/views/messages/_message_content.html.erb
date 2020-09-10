@@ -1,0 +1,45 @@
+<div class='message-contents__info'>
+  <%= message.user.last_name %><%= message.user.first_name %>＜<%= l message.created_at%>＞
+</div>
+<div class='message-contents__content'>
+  <div class='message-contents__content--top'>
+    <div class='message-contents__content--top-content short'>
+      <span>用件：</span><%= message.gist.name %>
+    </div>
+    <div class='message-contents__content--top-content short'>
+      <span>緊急性：</span><%= message.urgency.name %>
+    </div>
+    <div class='message-contents__content--top-content short'>
+      <span>返信要望：</span><%= message.response.name %>
+    </div>
+  </div>
+  <div class='message-contents__content--mid'>
+    <div class='message-contents__content--mid-content short'>
+      <span>返信方法：</span><%= message.res_type.name %>
+    </div>
+    <div class='message-contents__content--mid-content short'>
+      <span>内容：</span><%= message.content.name %>
+    </div>
+    <div class='message-contents__content--mid-content'>
+      <div class='message-contents__content--mid-content--left'>
+        <span>内容（補足）：</span>
+      </div>  
+      <div class='message-contents__content--mid-content--right'>
+        <%= message.sup_content %>
+      </div>
+    </div>
+  </div>
+  <div class='message-contents__content--low'>
+    <div class='message-contents__content--low-content--left'>
+      <span>対応状況：</span><%= message.status.name %>
+    </div>
+    <div class='message-contents__content--low-content'>
+      <div class='message-contents__content--low-content--right--left'>
+        <span>その他：</span>
+      </div>
+      <div class='message-contents__content--low-content--right--right'>
+        <%= message.others %>
+      </div>
+    </div>
+  </div>
+</div>

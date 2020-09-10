@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
+  
   root to: 'projects#index'
   resources :projects, only: [:new, :create] do
     resources :messages, only: [:index, :create]
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
     collection { post :import }
     collection { get :export }
     collection { get :search }
+  end
+
   resources :projects, only: [:new, :create] do
     resources :messages, only: [:show, :create]
   end

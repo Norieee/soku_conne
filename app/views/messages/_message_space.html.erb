@@ -1,5 +1,71 @@
 <div class='message_space'>
-  <span><%= @project.name %></span>
-  <div class='message_space__message-contents'>
+  <div class='message_space__project-name'>
+    <span><%= @project.name %></span>
   </div>
+  <div class='message_space__message-contents'>
+    <%= render partial: 'message_content', collection: @messages, as: :message %>
+  </div>
+</div>
+
+<div class='message_form'>
+  <%= form_with model: [@project, @message], html: {class: 'message_form__form'}, local: true do |f|%>
+    <div class='message_form__contents'>
+      <div class='message_form__content'>
+        <div class='message_form__content__text-wrap'>
+          <label>用件</label><span>必須</span>
+        </div>
+        <%= f.collection_select(:gist_id, Gist.all, :id, :name, {prompt: "--"}, {class:"gist_select"}) %>
+      </div>
+
+      <div class='message_form__content'>
+        <div class='message_form__content__text-wrap'>
+          <label>緊急性</label><span>必須</span>
+        </div>
+        <%= f.collection_select(:urgency_id, Urgency.all, :id, :name, {prompt: "--"}, {class:"urgency_select"}) %>
+      </div>
+
+      <div class='message_form__content'>
+        <div class='message_form__content__text-wrap'>
+          <label>返信要望</label><span>必須</span>
+        </div>
+        <%= f.collection_select(:response_id, Response.all, :id, :name, {prompt: "--"}, {class:"response_select"}) %>
+      </div>
+
+      <div class='message_form__content'>
+        <div class='message_form__content__text-wrap'>
+          <label>返信方法</label><span>返信を希望する場合は選択</span>
+        </div>
+        <%= f.collection_select(:res_type_id, ResType.all, :id, :name, {prompt: "--"}, {class:"res_type_select"}) %>
+      </div>
+ 
+      <div class='message_form__content'>
+        <div class='message_form__content__text-wrap'>
+          <label>内容</label><span>必須</span>
+        </div>
+        <%= f.collection_select(:content_id, Content.all, :id, :name, {prompt: "--"}, {class:"content_select"}) %>
+      </div>
+
+      <div class='message_form__content'>
+        <div class='message_form__content__text-wrap'>
+          <label>内容(補足)</label><span>その他の場合または補足があれば記載</span>
+        </div>
+        <%= f.text_field :sup_content, class: 'message_form__content__sup_content_form' %>
+      </div>
+
+      <div class='message_form__content'>
+        <div class='message_form__content__text-wrap'>
+          <label>対応状況</label><span>必須</span>
+        </div>
+        <%= f.collection_select(:status_id, Status.all, :id, :name, {prompt: "--"}, {class:"status_select"}) %>
+      </div>
+
+      <div class='message_form__content'>
+        <div class='message_form__content__text-wrap'>
+          <label>その他</label>
+        </div>
+        <%= f.text_area :others, class: 'message_form__content__sothers_form' %>
+      </div>
+    </div>
+    <%= f.submit '送信' %>
+  <% end %>
 </div>

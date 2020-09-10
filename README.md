@@ -1,18 +1,18 @@
 # アプリ名（URL）
 即コネ（即CONNECTION）
-（https://soku-conne.herokuapp.com/）
+<br>（https://soku-conne.herokuapp.com/）
 
 # テスト用接続情報
 - Basic認証（ID/Pass）
-  ID: admin
-  Pass: 2222
+  <br>ID: admin
+  <br>Pass: 2222
 - テスト用アカウント
-  確認用A
-  メールアドレス: aa@aa.com
-  パスワード:a11111 
-  確認用B
-  メールアドレス名: user@user.com
-  パスワード: b11111
+  <br>確認用A
+  <br>メールアドレス: aa@aa.com
+  <br>パスワード:a11111 
+  <br>確認用B
+  <br>メールアドレス名: user@user.com
+  <br>パスワード: b11111
 
 # 概要
 ## 第一報のハードルを下げコミュニケーションをより円滑にする
@@ -37,11 +37,11 @@
 - 急ぎで情報共有が状況があるも、多忙な時こそ疎かになりがち
 - 現場側とマネジメント側で共有タイミングの乖離が起こりがち
 
-# 洗い出した要件（赤字は今後実装予定）
+# 洗い出した要件（※は今後実装予定）
 **ユーザー管理**
 - gem:deviseを用いた基本的なユーザー管理機能実装
-- <span style="color: red;">所属企業による表示内容の切替</span>
-- <span style="color: red;">ユーザー登録可能者の制限によるセキュリティ強化</span>
+- 所属企業による表示内容の切替（※）
+- ユーザー登録可能者の制限によるセキュリティ強化（※）
 
 **Q&A管理**
 - QA一覧表示&キーワード検索
@@ -50,36 +50,36 @@
 
 **プロジェクト毎のメッセージ機能**
 - 選択式のメッセージ作成機能
-- <span style="color: red;">既読機能</span>
-- <span style="color: red;">1プロジェクト複数担当者の登録</span>
-- <span style="color: red;">新着通知機能</span>
+- 既読機能（※）
+- 1プロジェクト複数担当者の登録（※）
+- 新着通知機能（※）
 
 **その他**
-- <span style="color: red;">統一されたデザイン、視認性の向上のためのビュー調整</span>
+- 統一されたデザイン、視認性の向上のためのビュー調整（※）
 
 # DEMO画面
 - ログイン後プラットホーム画面
-![ログイン後TOP](app/assets/image/top_after_login.png)
+![ログイン後TOP](app/assets/images/top_after_login.png)
 
 - メッセージ送信後画面（ビュー仮置き）
-![メッセージ後](app/assets/image/tproject_message.png)
+![メッセージ後](app/assets/images/tproject_message.png)
 
 - QA一覧
-![QA一覧](app/assets/image/QA_index.png)
+![QA一覧](app/assets/images/QA_index.png)
 
 - QAキーワード検索（キーワード：プロトコル にて検索）
-![QA検索結果](app/assets/image/QA_search_results.png)
+![QA検索結果](app/assets/images/QA_search_results.png)
 
 - QAインポート・エクスポート画面
-![QA一覧](app/assets/image/QA_import_export_scr.png)
+![QA一覧](app/assets/images/QA_import_export_scr.png)
 
 - QAエクスポートによるExcel出力
-![QA出力](app/assets/image/QA_export_result.png)
+![QA出力](app/assets/images/QA_export_result.png)
 
 # テーブル設計
 
 ## ER図
-![ER図](app/assets/image/soku_conne_ER.png)
+![ER図](app/assets/images/soku_conne_ER.png)
 
 ## users テーブル
 

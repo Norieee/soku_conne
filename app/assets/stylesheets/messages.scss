@@ -1,92 +1,17 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.wrapper {
-  display: flex;
-}
-.side-bar {
-  background-color: #4d5a64;
-  width: 250px;
-  height: calc(100vh - 61px);
-  padding: 10px 15px;
-  overflow: scroll;
+
+.message_space span {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.menu {
-  max-width: 600px;
-}
-
-.menu a {
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color: white;
-}
-
-.menu label {
-  display: block;
-  margin: 4px 0;
-  padding: 15px;
-  line-height: 1px;
-  color :#fff;
-  background : #4d5a64;
-  cursor :pointer;
-}
-
-.menu label:hover {
-  opacity: 0.7;
-  background-color: #535f68;
-}
-
-.menu input {
-  display: none;
-}
-
-.menu ul {
-  margin: 0;
-  padding: 0;
-  background :#57646d;
-  list-style: none;
-}
-
-.menu li {
-  height: 0;
-  border-bottom: 1px solid #4d5a64;
-  overflow: hidden;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-#menu_bar01:checked ~ #links01 li,
-#menu_bar02:checked ~ #links02 li {
-  height: 54px;
-  opacity: 1;
-}
-
-.info {
-  background-color: #f5f8fc;
-  width: calc(100% - 250px);
-  padding: 20px;
-}
-
-.information-contents {
-  height: 42vh;
+.message_space__message-contents {
+  height: 78vh;
   background-color: white;
   border-radius: 10px;
-  margin-bottom: 10px;
   padding: 10px;
+  margin: 10px 0 0;
   overflow: scroll;
-}
-
-.information-contents__important-contents,
-.information-contents__new-contents {
-  width: 80%;
-}
-
-.information-contents__important-contents--content,
-.information-contents__new-contents--content {
-  margin: 10px 0 10px 15px;
 }

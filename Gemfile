@@ -53,7 +53,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# User manegement function
+# User management function
 gem 'devise'
 
 # For checking in the process of implementation
@@ -70,3 +70,6 @@ gem 'axlsx_rails'
 
 # Implementation of search function
 gem 'ransack'
+
+# Improving legibility with ActiveHash
+gem 'active_hash'

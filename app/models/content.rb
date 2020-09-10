@@ -1,4 +1,4 @@
-class Content < ApplicationRecord
+class Content < ActiveHash::Base
   self.data = [
     { id: 1, name: 'プロトコル' },
     { id: 2, name: '逸脱' },

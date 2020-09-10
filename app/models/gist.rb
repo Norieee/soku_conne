@@ -1,4 +1,4 @@
-class Gist < ApplicationRecord
+class Gist < ActiveHash::Base
   self.data = [
     { id: 1, name: '報告' },
     { id: 2, name: '相談' },

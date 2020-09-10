@@ -3,8 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .message_space span {
-  font-size: 20px;
   font-weight: bold;
+}
+
+.message_space__project-name {
+  font-size: 20px;
+}
+
+.message-contents__info {
+  padding-left: 10px;
 }
 
 .message_space__message-contents {
@@ -14,4 +21,52 @@
   padding: 10px;
   margin: 10px 0 0;
   overflow: scroll;
+}
+
+.message-contents__content {
+  width: 65%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ebf1f8;
+  border-radius: 10px;
+}
+
+.message-contents__content--top,
+.message-contents__content--mid,
+.message-contents__content--low {
+  display: flex;
+  margin: 5px 0;
+}
+
+.message-contents__content--mid-content {
+  width: 50%;
+}
+
+.short {
+  width: 25%;
+}
+
+.message-contents__content--mid-content--left {
+  width: 35%;
+}
+
+.message-contents__content--mid-content--right {
+  width: 65%;
+}
+
+.message-contents__content--low-content--left {
+  width: 35%;
+}
+
+.message-contents__content--low-content--right--left {
+  width: 15%;
+}
+
+.message-contents__content--low-content--right--right {
+  width: 85%;
+}
+
+.message-contents__content--mid-content,
+.message-contents__content--low-content {
+  display: flex;
 }

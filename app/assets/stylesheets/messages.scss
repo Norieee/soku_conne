@@ -15,12 +15,16 @@
 }
 
 .message_space__message-contents {
-  height: 78vh;
+  height: 76vh;
   background-color: white;
   border-radius: 10px;
   padding: 10px;
   margin: 10px 0 0;
   overflow: scroll;
+}
+
+.message_space__message-contents--right {
+  margin: 0 0 0 auto;
 }
 
 .message-contents__content {
@@ -58,6 +62,10 @@
   width: 35%;
 }
 
+.message-contents__content--low-content--right{
+  width: 65%;
+}
+
 .message-contents__content--low-content--right--left {
   width: 15%;
 }
@@ -69,4 +77,97 @@
 .message-contents__content--mid-content,
 .message-contents__content--low-content {
   display: flex;
+}
+
+.message_form_wrap {
+ display: flex;
+ justify-content: center;
+}
+
+.message_form_wrap .message_form_button {
+  padding: 3px 10px;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: #38aef0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+  
+.message_form_wrap .message_form_button:hover {
+  border-color: #999;
+  opacity: 0.8;
+}
+  
+.message_form_wrap .message_form_button:after {
+  content: "を送信";
+}
+  
+.message_form_wrap .message_form {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.6s;
+  background-color: rgb(244, 251, 255);
+  border: 1px solid #38aef0;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 58px;
+  right: 25px;
+  width: 370px;
+}
+  
+.message_form_wrap > input[type="checkbox"] {
+  display: none;
+}
+  
+.message_form_wrap > input[type="checkbox"]:checked ~ .message_form_button:after {
+  content: "欄を隠す";
+}
+  
+.message_form_wrap > input[type="checkbox"]:checked ~ .message_form {
+  display: block;
+  height: auto;
+  opacity: 1;
+  padding: 10px 0;
+}
+
+.message_form__content {
+  padding-left: 15px;
+  margin-bottom: 8px;
+}
+
+.message_form__content__text-wrap span {
+  color: rgb(255, 94, 94);
+  font-size: 10px;
+  padding-left: 8px;
+}
+
+.gist_select, .urgency_select, .response_select,
+.res_type_select, .content_select, .status_select {
+  width: 100px;
+  height: 30px;
+}
+
+.message_form__content__sup_content_form,
+.message_form__content__others_form {
+  width: 80%;
+}
+
+.message_form__btn {
+  padding-left: 15px;
+}
+
+.message_form__btn input{
+  width: 80px;
+  color: white;
+  background-color: #38aef0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
 }

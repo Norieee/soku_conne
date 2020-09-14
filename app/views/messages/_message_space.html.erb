@@ -7,65 +7,71 @@
   </div>
 </div>
 
-<div class='message_form'>
-  <%= form_with model: [@project, @message], html: {class: 'message_form__form'}, local: true do |f|%>
+<div class='message_form_wrap'>
+  <input type='checkbox' id='message_form_checkbox'>
+  <label class='message_form_button' for='message_form_checkbox'>メッセージ</label>
+  <div class='message_form'>
+    <%= form_with model: [@project, @message], html: {class: 'message_form__form'}, local: true do |f|%>
     <div class='message_form__contents'>
       <div class='message_form__content'>
         <div class='message_form__content__text-wrap'>
-          <label>用件</label><span>必須</span>
+          用件<span>必須</span>
         </div>
-        <%= f.collection_select(:gist_id, Gist.all, :id, :name, {prompt: "--"}, {class:"gist_select"}) %>
+        <%= f.collection_select(:gist_id, Gist.all, :id, :name, {prompt: '--'}, {class:'gist_select'}) %>
       </div>
 
       <div class='message_form__content'>
         <div class='message_form__content__text-wrap'>
-          <label>緊急性</label><span>必須</span>
+          緊急性<span>必須</span>
         </div>
-        <%= f.collection_select(:urgency_id, Urgency.all, :id, :name, {prompt: "--"}, {class:"urgency_select"}) %>
+        <%= f.collection_select(:urgency_id, Urgency.all, :id, :name, {prompt: '--'}, {class:'urgency_select'}) %>
       </div>
 
       <div class='message_form__content'>
         <div class='message_form__content__text-wrap'>
-          <label>返信要望</label><span>必須</span>
+          返信要望<span>必須</span>
         </div>
-        <%= f.collection_select(:response_id, Response.all, :id, :name, {prompt: "--"}, {class:"response_select"}) %>
+        <%= f.collection_select(:response_id, Response.all, :id, :name, {prompt: '--'}, {class:'response_select'}) %>
       </div>
 
       <div class='message_form__content'>
         <div class='message_form__content__text-wrap'>
-          <label>返信方法</label><span>返信を希望する場合は選択</span>
+          返信方法<span>返信希望の場合：必須</span>
         </div>
-        <%= f.collection_select(:res_type_id, ResType.all, :id, :name, {prompt: "--"}, {class:"res_type_select"}) %>
-      </div>
- 
-      <div class='message_form__content'>
-        <div class='message_form__content__text-wrap'>
-          <label>内容</label><span>必須</span>
-        </div>
-        <%= f.collection_select(:content_id, Content.all, :id, :name, {prompt: "--"}, {class:"content_select"}) %>
+        <%= f.collection_select(:res_type_id, ResType.all, :id, :name, {prompt: '--'}, {class:'res_type_select'}) %>
       </div>
 
       <div class='message_form__content'>
         <div class='message_form__content__text-wrap'>
-          <label>内容(補足)</label><span>その他の場合または補足があれば記載</span>
+          内容<span>必須</span>
+        </div>
+        <%= f.collection_select(:content_id, Content.all, :id, :name, {prompt: '--'}, {class:'content_select'}) %>
+      </div>
+
+      <div class='message_form__content'>
+        <div class='message_form__content__text-wrap'>
+          内容(補足)<span>「内容：その他」または補足があれば記載</span>
         </div>
         <%= f.text_field :sup_content, class: 'message_form__content__sup_content_form' %>
       </div>
 
       <div class='message_form__content'>
         <div class='message_form__content__text-wrap'>
-          <label>対応状況</label><span>必須</span>
+          対応状況<span>必須</span>
         </div>
-        <%= f.collection_select(:status_id, Status.all, :id, :name, {prompt: "--"}, {class:"status_select"}) %>
+        <%= f.collection_select(:status_id, Status.all, :id, :name, {prompt: '--'}, {class:'status_select'}) %>
       </div>
 
       <div class='message_form__content'>
         <div class='message_form__content__text-wrap'>
-          <label>その他</label>
+          その他
         </div>
-        <%= f.text_area :others, class: 'message_form__content__sothers_form' %>
+        <%= f.text_area :others, class: 'message_form__content__others_form' %>
       </div>
     </div>
-    <%= f.submit '送信' %>
-  <% end %>
+    <div class='message_form__btn'>
+      <%= f.submit '送信' %>
+    </div>
+    <% end %>
+  </div>
 </div>

@@ -1,18 +1,18 @@
 <div class='menu'>
-    <label for="menu_bar01">Projects</label>
-    <input type="checkbox" id="menu_bar01" class="accordion" />
-    <ul id="links01">
-      <li><a href='/projects/new'>Project追加</a></li>
-      <% current_user.projects.each do |project| %>
-        <div class="project-name">
-          <li><%= link_to project.name, project_messages_path(project) %></li>
-        </div>
-      <% end %>
-    </ul>
-    <label for="menu_bar02">Q&A</label>
-    <input type="checkbox" id="menu_bar02" class="accordion" />
-    <ul id="links02">
-      <li><a href='/qas'>Q&A一覧</a></li>
-      <li><a href='/qas/new'>インポート/エクスポート</a></li>
-    </ul>
+  <label for="menu_bar01">Projects</label>
+  <input type="checkbox" id="menu_bar01" class="accordion" />
+  <ul id="links01">
+    <li><a href='/projects/new'>Project追加</a></li>
+    <% current_user.projects.each do |project| %>
+      <div class="project-name">
+        <li><%= link_to project.name, project_messages_path(project) %></li>
+      </div>
+    <% end %>
+  </ul>
+  <label for="menu_bar02">Q&A</label>
+  <input type="checkbox" id="menu_bar02" class="accordion" />
+  <ul id="links02">
+    <li><a href='/qas'>Q&A一覧</a></li>
+    <li><a href='/qas/new'>インポート/エクスポート</a></li>
+  </ul>
 </div>

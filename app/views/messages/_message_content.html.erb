@@ -15,7 +15,12 @@
   </div>
   <div class='message-contents__content--mid'>
     <div class='message-contents__content--mid-content short'>
-      <span>返信方法：</span><%= message.res_type.name %>
+      <span>返信方法：</span>
+      <% if message.res_type_id.blank? %>
+        N/A
+      <% else %>
+        <%= message.res_type.name %>
+      <% end %>
     </div>
     <div class='message-contents__content--mid-content short'>
       <span>内容：</span><%= message.content.name %>
@@ -33,7 +38,7 @@
     <div class='message-contents__content--low-content--left'>
       <span>対応状況：</span><%= message.status.name %>
     </div>
-    <div class='message-contents__content--low-content'>
+    <div class='message-contents__content--low-content--right'>
       <div class='message-contents__content--low-content--right--left'>
         <span>その他：</span>
       </div>

@@ -1,16 +1,25 @@
+.top_before_login_image img {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+}
+
 .account-page .account-page__inner {
-  width: 980px;
+  width: 700px;
+  padding: 20px;
   margin: 60px auto;
-  padding: 60px;
-  background-color: #fff;
+  background-color: #4d5a64;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 20px;
+  opacity: 0.8;
+  position: relative;
 }
 
 .account-page .account-page__inner .account-page__inner--left,
 .account-page .account-page__inner .account-page__inner--right {
   float: left;
   width: 50%;
+  color: white;
 }
 
 .account-page .account-page__inner:after {
@@ -24,6 +33,7 @@
   letter-spacing: 3px;
   font-size: 40px;
   font-weight: 200;
+  color: white;
 }
 
 .account-page .account-page__header h2:after {
@@ -32,6 +42,11 @@
   width: 60px;
   margin-top: 5px;
   border-bottom: 1px solid #38aef0;
+}
+
+.account-page__header a {
+  color: white;
+  text-decoration: none;
 }
 
 .account-page .account-page__header h5 {

@@ -14,6 +14,28 @@
   padding-left: 10px;
 }
 
+.message-contents__content_and_checked {
+  display: flex;
+  position: relative;
+}
+
+.message-contents__checked {
+  width: 20%;
+  margin-left: 8px;
+  font-size: 14px;
+  position: absolute;
+  bottom: 10px;
+  left:710px
+}
+
+.message-contents__checked--name {
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #ebf1f8;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
 .message_space__message-contents {
   height: 76vh;
   background-color: white;
@@ -77,6 +99,19 @@
 .message-contents__content--mid-content,
 .message-contents__content--low-content {
   display: flex;
+}
+
+.check_icon {
+  height: 14px;
+  width: 14px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.check_icon:hover {
+  height: 16px;
+  width: 16px;
+  opacity: 0.9;
 }
 
 .message_form_wrap {

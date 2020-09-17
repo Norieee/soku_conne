@@ -73,3 +73,6 @@ gem 'ransack'
 
 # Improving legibility with ActiveHash
 gem 'active_hash'
+
+# To enable variables in JS processing
+gem 'gon'

@@ -3,6 +3,9 @@ class MessagesController < ApplicationController
     @message = Message.new
     @project = Project.find(params[:project_id])
     @messages = @project.messages.includes(:user).order('created_at DESC')
+    if user_signed_in?
+      gon.current_user_name = current_user.last_name + current_user.first_name
+    end
   end
 
   def create

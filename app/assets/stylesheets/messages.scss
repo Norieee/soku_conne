@@ -36,6 +36,10 @@
   overflow: scroll;
 }
 
+.message-contents__checked--name li {
+  list-style: none;
+}
+
 .message_space__message-contents {
   height: 76vh;
   background-color: white;
